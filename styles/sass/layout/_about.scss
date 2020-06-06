@@ -1,0 +1,29 @@
+.about-section {
+    margin: 5rem 0;
+    height: 35rem;
+    background-color: $color-primary;
+    color: $color-white;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+    &__container{
+        padding: 0 2rem;
+        width: 100%;
+        max-width: 900px;
+
+        &-header{
+            font-size: 3rem;
+            font-weight: 600;
+            padding-bottom: 1rem;
+        }
+    
+        &-caption{
+            font-size: 1.5rem;
+        }
+    }
+
+
+}

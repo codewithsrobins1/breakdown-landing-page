@@ -1,0 +1,16 @@
+.logo-section{
+    display: flex;
+    align-items: center;
+
+    & img{
+        width: 50px;
+        height: 50px;
+    }
+
+    & h1{
+        font-size: 1.75rem;
+        color: $color-white;
+        font-family: 'Roboto', sans-serif;
+        padding-left: 3px;
+    }
+}

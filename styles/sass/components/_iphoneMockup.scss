@@ -1,0 +1,23 @@
+.features-section__container-block{
+    width: 100%;
+
+    &--image{
+        width: 100%;
+        padding-bottom: 1rem;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    &--description{
+
+        & h3{
+            font-size: 2rem;
+        }
+
+        & p {
+            font-size: 1.5rem;
+        }
+    }
+}

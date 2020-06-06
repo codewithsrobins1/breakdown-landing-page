@@ -1,0 +1,65 @@
+// Photo by Harold Mendoza on Unsplash
+.landing-section {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../images/landing-background.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.hero-section{
+    text-align: center;
+    width: 100%;
+    @include absCenter;
+    // position: absolute;
+    // top: 25%;
+    // left: 50%;
+    // transform: translate(-50%, 0%);
+
+    &__header{
+        width: 100%;
+
+
+        &--main{
+            display: block;
+            color: $color-white;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            animation: moveInLeft 2s ease-out; 
+        }
+
+        &--sub {
+            display: block;
+            color: $color-white;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            animation: moveInRight 2s ease-out; /*shorthand method */
+        }
+    }
+
+    &__description{
+        font-size: 1.5rem;
+        width: 95%;
+        margin: 0 auto;
+        color: $color-white;
+        padding-top: 1rem;
+        animation: moveInBottom 2s ease-out;
+    }
+}
+
+#landing-app-store{
+    animation: moveInBottom 2s ease-out;
+}
+
+.hero-image-iphone{
+    display: none;
+    position: absolute;
+    bottom: -35%;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    animation: moveInBottom 1.5s ease-out;
+}

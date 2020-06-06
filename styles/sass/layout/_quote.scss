@@ -1,0 +1,37 @@
+.quote-section {
+    height: 35rem;
+    background-color: $color-primary;
+    color: $color-white;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__container{
+        padding: 0 2rem;
+        width: 100%;
+        max-width: 900px;
+
+        & i {
+            font-size: 3rem;
+            padding-bottom: 2rem;
+        }
+
+        &-quote{
+            font-size: 1.75rem;
+            font-weight: 600;
+        }
+        
+        &-break{
+            width: 15%;
+            margin: 2rem auto;
+            border: 3px solid $color-white;
+            border-radius: 10px;
+        }
+
+        &-author{
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+}
