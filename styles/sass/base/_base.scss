@@ -16,6 +16,7 @@ a {
 
 html{
     font-size: 62.5%; /* Want 62.5% of the default root font (16px) to have rems in increments of 10px; 1 rem = 16px */
+    scroll-behavior: smooth;
 }
 
 //Change color when user selects text

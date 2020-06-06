@@ -1,23 +1,18 @@
-// Photo by Harold Mendoza on Unsplash
 .landing-section {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../images/landing-background.webp');
+    // Photo by Harold Mendoza on Unsplash
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../images/landing-background.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
 }
 
-
 .hero-section{
     text-align: center;
     width: 100%;
     @include absCenter;
-    // position: absolute;
-    // top: 25%;
-    // left: 50%;
-    // transform: translate(-50%, 0%);
 
     &__header{
         width: 100%;
@@ -29,6 +24,15 @@
             font-size: 2.5rem;
             text-transform: uppercase;
             animation: moveInLeft 2s ease-out; 
+
+            @include respond(phone) {
+                font-size: 3.5rem;
+            }
+
+            @include respond(desktop) {
+                font-size: 6rem;
+                letter-spacing: 5px;
+            }
         }
 
         &--sub {
@@ -37,6 +41,15 @@
             font-size: 2.5rem;
             text-transform: uppercase;
             animation: moveInRight 2s ease-out; /*shorthand method */
+
+            @include respond(phone) {
+                font-size: 3.5rem;
+            }
+
+            @include respond(desktop) {
+                font-size: 6rem;
+                letter-spacing: 5px;
+            }
         }
     }
 
@@ -47,6 +60,14 @@
         color: $color-white;
         padding-top: 1rem;
         animation: moveInBottom 2s ease-out;
+
+        @include respond(phone){
+            font-size: 2rem;
+        }
+
+        @include respond(desktop){
+            font-size: 3rem;
+        }
     }
 }
 

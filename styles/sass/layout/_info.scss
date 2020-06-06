@@ -1,12 +1,25 @@
 .information-cards-section {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 
+    @include respond(desktop) {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
     &__header{
         font-size: 2.5rem;
         text-align: center;
         padding: 3rem 0;
+
+        @include respond(phone){
+            font-size: 3rem;
+            padding: 4rem 0;
+        }
     }
 }
 
@@ -17,27 +30,40 @@
     grid-gap: 3rem;
     padding: 0 2rem;
     width: 100%;
-    max-width: 1800px;
+    max-width: 1400px;
     margin: 0 auto;
+
+    @include respond(tab-port) {
+        width: 90%;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); 
+    }
+
+    @include respond(desktop) {
+        width: 100%;
+    }
 }
 
 
 //Grid Cards
 .information-cards-section__container-cards{
-    border: 2px solid $color-grey-light-2;
+    border: 3px solid $color-grey-light-2;
     width: 100%;
     margin: 0 auto;
-    transition: all .3s;
+    transition: all .3s ease-in-out;
     text-align: center;
 
     &:hover{
-        cursor: pointer;
         transform: translateY(-2px);
         box-shadow: $box-shadow-main;
+        border: 3px solid $color-primary;
     }
 
     &--container{
         padding: 2rem;
+
+        @include respond(desktop) {
+            padding: 4rem;
+        }
 
         & i{
             font-size: 5rem;
@@ -52,6 +78,10 @@
     
         & p{
             font-size: 1.5rem;
+
+            @include respond(desktop){
+                font-size: 1.75rem;
+            }
         }
     }
 }

@@ -18,7 +18,7 @@
         <!-- Nav Section -->
         <nav class="nav-section">
             <div class="logo-section">
-                <img src="./images/logo.svg" alt="logo" /></a>
+                <a href="#home"><img src="./images/logo.svg" alt="logo" /></a>
                 <h1 class="logo-section-header">The Breakdown</h1>
             </div>
 
@@ -32,7 +32,7 @@
                 </div>
 
                 <li class="link"><a href="#about">About</a></li> 
-                <li class="link"><a href="#feature">Features</a></li>
+                <li class="link"><a href="#features">Features</a></li>
                 <li class="link"><a href="#contact">Contact</a></li>
 
                 <div class="social-links social-links-closed">
@@ -120,15 +120,20 @@
     </section>
 
     <!-- Features Section -->
-    <section class="features-section">
+    <section class="features-section" id="features">
         <h2 class="features-section__header heading">Information tailored for 
             <span class="primary-color-text">your interests</span>
         </h2>
 
         <div class="features-section__container">
-            <div class="features-section__container-block" data-aos="fade-left">
+            <div class="features-section__container-block" data-aos="fade-up">
                 <div class="features-section__container-block--image">
-                    <img src="images/iphone-categories.webp" alt="iphone mockup">
+                    <picture>
+                        <source type="image/webp" srcset="images/iphone-categories.webp" /> 
+                        <!-- if browser can't use webp, use source below instead -->
+                        <source type="image/png" srcset="images/iphone-categories.png" /> 
+                        <img src="images/iphone-categories.png" alt="iphone mockup">
+                    </picture>
                 </div>
                 <div class="features-section__container-block--description">
                     <h3 class="primary-color-text">1. Choose Interests</h3>
@@ -140,9 +145,14 @@
                 </div>
             </div>
 
-            <div class="features-section__container-block reverse" data-aos="fade-right">
+            <div class="features-section__container-block reverse" data-aos="fade-up">
                 <div class="features-section__container-block--image">
-                    <img src="images/iphone-bills.webp" alt="iphone mockup">
+                    <picture>
+                        <source type="image/webp" srcset="images/iphone-bills.webp" /> 
+                        <!-- if browser can't use webp, use source below instead -->
+                        <source type="image/png" srcset="images/iphone-bills.png" /> 
+                        <img src="images/iphone-bills.png" alt="iphone mockup">
+                    </picture>
                 </div>
                 <div class="features-section__container-block--description">
                     <h3 class="primary-color-text">2. Read Bills</h3>
@@ -154,9 +164,14 @@
                 </div>
             </div>
 
-            <div class="features-section__container-block" data-aos="fade-left">
+            <div class="features-section__container-block" data-aos="fade-up">
                 <div class="features-section__container-block--image">
-                    <img src="images/iphone-bill-details.webp" alt="iphone mockup">
+                    <picture>
+                        <source type="image/webp" srcset="images/iphone-bill-details.webp" /> 
+                        <!-- if browser can't use webp, use source below instead -->
+                        <source type="image/png" srcset="images/iphone-bill-details.png" /> 
+                        <img src="images/iphone-bill-details.png" alt="iphone mockup">
+                    </picture>
                 </div>
                 <div class="features-section__container-block--description">
                     <h3 class="primary-color-text">3. See Details</h3>
@@ -168,9 +183,14 @@
                 </div>
             </div>
 
-            <div class="features-section__container-block reverse" data-aos="fade-right">
+            <div class="features-section__container-block reverse" data-aos="fade-up">
                 <div class="features-section__container-block--image">
-                    <img src="images/iphone-representatives.webp" alt="iphone mockup">
+                    <picture>
+                        <source type="image/webp" srcset="images/iphone-representatives.webp" /> 
+                        <!-- if browser can't use webp, use source below instead -->
+                        <source type="image/png" srcset="images/iphone-representatives.png" /> 
+                        <img src="images/iphone-representatives.png" alt="iphone mockup">
+                    </picture>
                 </div>
                 <div class="features-section__container-block--description">
                     <h3 class="primary-color-text">4. Notify Representatives</h3>
@@ -216,11 +236,11 @@
 
             <form action="" class="contact-section__container-form">
                 <div class="contact-section__container-form--information">
-                    <input  type="text" placeholder="Name:" required>
-                    <input type="email" placeholder="Email:" required>
+                    <input id="text" type="text" placeholder="Name:" required>
+                    <input id="email" type="email" placeholder="Email:" required>
                 </div>
 
-                <textarea class="contact-section__container-form--message" name="message" placeholder="Message..." required></textarea>
+                <textarea class="contact-section__container-form--message" nolder="Message..." required></textarea>
 
                 <div class="contact-section__container-form--button">
                     <button class="contact-section__form--button" >
@@ -234,21 +254,23 @@
 
     <!-- Footer -->
     <footer class="footer-section">
-        <div class="footer-section__logo-container">
-            <div class="logo-section">
-                <a href="#"><img src="images/logo.svg" alt="logo"></a>
-                <h1 class="logo-section-header">The Breakdown</h1>
+        <div class="footer-section__container">
+            <div class="footer-section__logo-container">
+                <div class="logo-section">
+                    <a href="#"><img src="images/logo.svg" alt="logo"></a>
+                    <h1 class="logo-section-header">The Breakdown</h1>
+                </div>
             </div>
+    
+            <!-- Icon made by Pixel perfect from www.flaticon.com -->
+            <div class="social-links">
+                <a href="https://www.instagram.com/breakdown.us/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://twitter.com/explore" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+    
+            <p id="copyright">&copy; All rights reserved.</p>
         </div>
-
-        <!-- Icon made by Pixel perfect from www.flaticon.com -->
-        <div class="social-links">
-            <a href="https://www.instagram.com/breakdown.us/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://twitter.com/explore" target="_blank"><i class="fab fa-twitter"></i></a>
-        </div>
-
-        <p id="copyright">&copy; All rights reserved.</p>
     </footer>
 
 

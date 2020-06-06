@@ -1,3 +1,5 @@
+<!-- File to copy & paste code in order to try new code  -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,31 +9,42 @@
     <link rel="apple-touch-icon" href="images/logo.svg" />
     <link rel="stylesheet" href="styles/sass/main.css" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/ddadad7e59.js" crossorigin="anonymous"></script>
     <title>The Breakdown</title>
 </head>
 
 <body>
     <!-- Landing -->
-    <header class="landing-section">
+    <header class="landing-section" id="home">
         <!-- Nav Section -->
         <nav class="nav-section">
             <div class="logo-section">
-                <img src="images/logo.svg" alt="logo">
+                <a href="#home"><img src="./images/logo.svg" alt="logo" /></a>
                 <h1 class="logo-section-header">The Breakdown</h1>
             </div>
 
             <div class="menu-icon-open">
-                <img id="open-icon" src="images/hamburger.svg" alt="menu open">
+                <i id="open-icon" class="fas fa-bars"></i>
             </div>
 
             <ul class="nav-links">
                 <div class="menu-icon-close">
-                    <img id="close-icon" src="images/close.svg" alt="close icon">
+                    <i id="close-icon" class="fas fa-times"></i>
                 </div>
 
                 <li class="link"><a href="#about">About</a></li> 
-                <li class="link"><a href="#feature">Features</a></li>
+                <li class="link"><a href="#features">Features</a></li>
                 <li class="link"><a href="#contact">Contact</a></li>
+
+                <div class="social-links social-links-closed">
+                    <a href="https://www.instagram.com/breakdown.us/?hl=en" target="_blank"><i class="fab fa-instagram link"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square link"></i></a>
+                    <a href="https://twitter.com/explore" target="_blank"><i class="fab fa-twitter link"></i></a>
+                </div>
+                <div>
+
+                </div>
             </ul>
         </nav>
 
@@ -42,16 +55,16 @@
                 <span class='hero-section__header--sub'>to our democracy</span>
             </h1>
             <p class="hero-section__description">Stay up to date on political news that you choose</p>
-            <a href="#"><img id="landing-app-store" class="apple-icon-button" src="images/app-store-badge.svg" alt="apple store icon"></a>
+            <a href="https://apps.apple.com/us/app/breakdown/id1492177142" target="_blank">
+                <img id="landing-app-store" class="apple-icon-button" src="images/app-store-badge.svg" alt="apple store icon">
+            </a>
         </div>
 
         <!-- Landing Page Mockup -->
         <img class="hero-image-iphone" src="images/iphone-app-landing.webp" alt="app mockup">
     </header>
 
-
-
-
+    <!-- Main Content -->
     <main>
     <!-- Information Cards Section -->
     <section class="information-cards-section">
@@ -61,50 +74,61 @@
         <div class="information-cards-section__container">
             <!-- Icons made by Pixel perfect from www.flaticon.com -->
             <div class="information-cards-section__container-cards">
-                <img src="images/alarm.svg" alt="alarm icon">
-                <h3 class="information-cards-section__container-cards-heading">Recent News</h3>
-                <p class="information-cards-section__container-cards-info">Get updates related to the political issues you choose</p>
+                <div class="information-cards-section__container-cards--container">
+                    <i class="far fa-bell"></i>
+                    <h3 class="information-cards-section__container-cards-heading">Recent News</h3>
+                    <p class="information-cards-section__container-cards-info">Get updates related to the political issues you choose</p>
+                </div>
             </div>
 
             <div class="information-cards-section__container-cards">
-                <img src="images/representative.svg" alt="representative icon">
-                <h3 class="information-cards-section__container-cards-heading">Leadership Accountability</h3>
-                <p class="information-cards-section__container-cards-info">Receive news on your local and federal representatives</p>
+                <div class="information-cards-section__container-cards--container">
+                    <i class="fas fa-person-booth"></i>
+                    <h3 class="information-cards-section__container-cards-heading">Leadership Accountability</h3>
+                    <p class="information-cards-section__container-cards-info">Receive news on your local and federal representatives</p>
+                </div>
             </div>
 
             <div class="information-cards-section__container-cards">
-                <img src="images/megaphone.svg" alt="megaphone icon">
-                <h3 class="information-cards-section__container-cards-heading">Your voice matters</h3>
-                <p class="information-cards-section__container-cards-info">Tell your representatives how you want them to vote on the bills that matter to you</p>
+                <div class="information-cards-section__container-cards--container">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3 class="information-cards-section__container-cards-heading">Your voice matters</h3>
+                    <p class="information-cards-section__container-cards-info">Tell your representatives how you want them to vote on the bills that matter to you</p>
+                </div>
             </div>
 
             <div class="information-cards-section__container-cards">
-                <img src="images/fist.svg" alt="fist icon">
-                <h3 class="information-cards-section__container-cards-heading">Fight for your issues</h3>
-                <p class="information-cards-section__container-cards-info">Fights for the political issues you are interested in</p>
+                <div class="information-cards-section__container-cards--container">
+                    <i class="fas fa-fist-raised"></i>
+                    <h3 class="information-cards-section__container-cards-heading">Fight for your issues</h3>
+                    <p class="information-cards-section__container-cards-info">Fights for the political issues you are interested in</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about-section">
-        <h2 class="about-section__header">Our Mission</h2>
-        <p class="about-section__description">
-            The Breakdown aims to bring individuals concrete information on topics they care about. 
-            Users can access information about what the congress and senate are doing related to topics a user chooses. 
-            By consolidating information specific to an individual's interests, 
-            The Breakdown aims to increase the knowledge individuals have about the actions of their elected representatives.
-        </p>
+    <section class="about-section" id="about">
+        <div class="about-section__container">
+            <h2 class="about-section__container-header heading">Our Mission</h2>
+            <p class="about-section__container-caption">
+                The Breakdown aims to bring individuals concrete information on topics they care about. 
+                Users can access information about what the congress and senate are doing related to topics a user chooses. 
+                By consolidating information specific to an individual's interests, 
+                The Breakdown aims to increase the knowledge individuals have about the actions of their elected representatives.
+            </p>
+        </div>
+
     </section>
 
     <!-- Features Section -->
-    <section class="features-section">
-        <h2 class="features-section__header">Information tailored for 
+    <section class="features-section" id="features">
+        <h2 class="features-section__header heading">Information tailored for 
             <span class="primary-color-text">your interests</span>
         </h2>
 
         <div class="features-section__container">
-            <div class="features-section__container-block">
+            <div class="features-section__container-block" data-aos="fade-up">
                 <div class="features-section__container-block--image">
                     <img src="images/iphone-categories.webp" alt="iphone mockup">
                 </div>
@@ -118,7 +142,7 @@
                 </div>
             </div>
 
-            <div class="features-section__container-block reverse">
+            <div class="features-section__container-block reverse" data-aos="fade-up">
                 <div class="features-section__container-block--image">
                     <img src="images/iphone-bills.webp" alt="iphone mockup">
                 </div>
@@ -132,7 +156,7 @@
                 </div>
             </div>
 
-            <div class="features-section__container-block">
+            <div class="features-section__container-block" data-aos="fade-up">
                 <div class="features-section__container-block--image">
                     <img src="images/iphone-bill-details.webp" alt="iphone mockup">
                 </div>
@@ -146,7 +170,7 @@
                 </div>
             </div>
 
-            <div class="features-section__container-block reverse">
+            <div class="features-section__container-block reverse" data-aos="fade-up">
                 <div class="features-section__container-block--image">
                     <img src="images/iphone-representatives.webp" alt="iphone mockup">
                 </div>
@@ -161,60 +185,81 @@
             </div>
         </div>
 
-        <a href="#"><img src="images/app-store-badge.svg" alt="apple store icon"></a>
+        <div class="features-section__store-button">
+            <a href="https://apps.apple.com/us/app/breakdown/id1492177142" target="_blank">
+                <img class="apple-icon-button" src="images/app-store-badge.svg" alt="apple store icon">
+            </a>
+        </div>
+        
     </section>
 
     <!-- Quote Section -->
     <section class="quote-section">
-        <img src="images/quotes.svg" alt="quotes">
-        <p class="quote-section__quote">
-            We do not have government by the majority. We have government by the majority who participate.
-        </p>
-        <hr class="quote-section__break">
-        <h3 class="quote-section__author">Thomas Jefferson</h3>
+        <div class="quote-section__container">
+            <i class="fas fa-quote-right"></i>
+            <p class="quote-section__container-quote">
+                We do not have government by the majority. We have government by the majority who participate.
+            </p>
+            <hr class="quote-section__container-break">
+            <h3 class="quote-section__container-author">Thomas Jefferson</h3>
+        </div>
+
     </section>
 
     <!-- Contact Us Form -->
-    <section class="contact-section">
-        <h2 class="contact-section__header">Contact</h2>
-        <p class="contact-section__description">
-            Got a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
-        </p>
-
-        <form action="" class="contact-section__form">
-            <div class="contact-section__form--information">
-                <input type="text" placeholder="Name:">
-                <input type="email" placeholder="Email:">
+    <section class="contact-section" id="contact">
+        <div class="contact-section__container">
+            <div class="contact-section__container-info">
+                <h2 class="contact-section__container-info-header heading">Contact</h2>
+                <p class="contact-section__container-info-description">
+                    Got a question? We'd love to hear from you.
+                </p>
             </div>
 
-            <textarea class="contact-section__form--message" name="message" placeholder="Message..."></textarea>
-            <button class="contact-section__form--button" >
-                Submit
-            </button>    
-        </form>
+            <form action="" class="contact-section__container-form">
+                <div class="contact-section__container-form--information">
+                    <input id="text" type="text" placeholder="Name:" required>
+                    <input id="email" type="email" placeholder="Email:" required>
+                </div>
+
+                <textarea class="contact-section__container-form--message" nolder="Message..." required></textarea>
+
+                <div class="contact-section__container-form--button">
+                    <button class="contact-section__form--button" >
+                        Submit
+                    </button>  
+                </div>
+            </form>
+        </div>
     </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer-section">
-        <div class="footer-section__logo-container">
-            <div class="logo-section">
-                <img src="images/logo.svg" alt="logo">
-                <h1 class="logo-section-header">The Breakdown</h1>
+        <div class="footer-section__container">
+            <div class="footer-section__logo-container">
+                <div class="logo-section">
+                    <a href="#"><img src="images/logo.svg" alt="logo"></a>
+                    <h1 class="logo-section-header">The Breakdown</h1>
+                </div>
             </div>
-        </div>
-
-        <p id="copyright">2020 The Breakdown. All rights reserved.</p>
-
-        <!-- Icon made by Pixel perfect from www.flaticon.com -->
-        <div class="footer-section__social-links">
-            <a href="#"><img src="images/instagram.svg" alt="instagram logo"></a>
-            <a href="#"><img src="images/twitter.svg" alt="twitter logo"></a>
-            <a href="#"><img src="images/facebook.svg" alt="facebook logo"></a>
+    
+            <!-- Icon made by Pixel perfect from www.flaticon.com -->
+            <div class="social-links">
+                <a href="https://www.instagram.com/breakdown.us/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://twitter.com/explore" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+    
+            <p id="copyright">&copy; All rights reserved.</p>
         </div>
     </footer>
 
 
-<script src="script.js"></script>    
+<script src="script.js"></script>   
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script> 
 </body>
 </html>

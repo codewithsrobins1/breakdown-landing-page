@@ -5,6 +5,10 @@
         padding: 4rem;
         text-align: center;
 
+        @include respond(desktop) {
+            padding: 6rem;
+        }
+
         &-info{
             &-header{
                 font-size: 3rem;
@@ -13,6 +17,10 @@
     
             &-description {
                 font-size: 1.5rem;
+
+                @include respond(phone) {
+                    font-size: 2rem;
+                }
             }
         }
         
@@ -21,7 +29,7 @@
     &__container-form{
         padding-top: 2rem;
         width: 100%;
-        max-width: 600px;
+        max-width: 500px;
         margin: 0 auto;
 
         &--information{
@@ -35,6 +43,10 @@
                 padding: 5px;
                 outline: none;
                 transition: all .2s;
+
+                @include respond(phone){
+                    padding: 1rem;
+                }
 
 
                 &:focus{
@@ -53,6 +65,10 @@
             outline: none;
             transition: all .2s;
 
+            @include respond(phone){
+                padding: 1rem;
+            }
+
             &:focus{
                 border: 3px solid $color-primary;
             }
@@ -62,7 +78,7 @@
             text-align: center;
 
             & button{
-                padding: 10px 15px;
+                padding: 1rem 1.5rem;
                 font-size: 1.5rem;
                 background-color: $color-blue;
                 color: $color-white;
@@ -70,6 +86,13 @@
                 outline: none;
                 border: none;
                 cursor: pointer;
+                transition: all .3s ease-in-out;
+                backface-visibility: hidden;
+
+                &:hover{
+                    transform: translate(-2px, -2px);
+                    box-shadow: 0 1rem 1rem rgba($color-black, .3);
+                }
             }
         }
     }

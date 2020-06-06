@@ -9,6 +9,10 @@
 .menu-icon-open i{
     font-size: 3rem;
     color: $color-white;
+
+    @include respond(desktop){
+        display: none;
+    }
 }
 
 .nav-links{
@@ -24,6 +28,17 @@
     justify-content: center;
     z-index: 1500;
     transition: all 650ms ease-in-out;
+
+    @include respond(desktop) {
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+        flex-direction: row;
+        transition: initial;
+    }
 }
 
 .nav-links.active{
@@ -34,6 +49,10 @@
     position: absolute;
     top: 2rem;
     right: 2rem;
+
+    @include respond(desktop){
+        display: none;
+    }
     
     & i {
         font-size: 3rem;
@@ -43,10 +62,34 @@
 
 .nav-links li {
     margin: 2rem 0;
+
+    @include respond (desktop){
+        padding: 0 2rem;
+    }
 }
 
 .nav-links a{
     font-size: 2.5rem;
     font-weight: 600;
     color: $color-grey-light-1;
+
+    @include respond(desktop) {
+        font-size: 2rem;
+        padding-bottom: 5px;
+        border-bottom: 3px solid transparent;
+        transition: all .3s ease-in-out;
+
+        &:hover{
+            border-bottom: 3px solid $color-white;
+        }
+    }
 }
+
+.social-links-closed{
+
+    @include respond(desktop){
+        display: none;
+    }
+}
+
+

@@ -3,8 +3,13 @@
     align-items: center;
 
     & img{
-        width: 50px;
-        height: 50px;
+        width: 5rem;
+        height: 5rem;
+
+        @include respond(desktop) {
+            width: 6rem;
+            height: 6rem;
+        }
     }
 
     & h1{
@@ -12,5 +17,9 @@
         color: $color-white;
         font-family: 'Roboto', sans-serif;
         padding-left: 3px;
+
+        @include respond(desktop) {
+            font-size: 2rem;
+        }
     }
 }
