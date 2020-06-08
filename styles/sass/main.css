@@ -950,21 +950,24 @@ body {
   max-width: 600px;
 }
 
-.quote-section__container i {
-  font-size: 3rem;
+.quote-section__container img {
+  width: 7rem;
+  height: 7rem;
   padding-bottom: 2rem;
 }
 
 @media only screen and (min-width: 37.5em) {
-  .quote-section__container i {
-    font-size: 4rem;
+  .quote-section__container img {
+    width: 9rem;
+    height: 9rem;
     padding-bottom: 2.5rem;
   }
 }
 
-@media only screen and (min-width: 75em) {
-  .quote-section__container i {
-    font-size: 5rem;
+@media only screen and (min-width: 56.25em) {
+  .quote-section__container img {
+    width: 11rem;
+    height: 11rem;
   }
 }
 
