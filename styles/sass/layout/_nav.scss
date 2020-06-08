@@ -6,9 +6,10 @@
     padding-top: 2rem;
 }
 
-.menu-icon-open i{
-    font-size: 3rem;
-    color: $color-white;
+.menu-icon-open img{
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
 
     @include respond(desktop){
         display: none;
@@ -54,9 +55,11 @@
         display: none;
     }
     
-    & i {
-        font-size: 3rem;
+    & img {
+        height: 4rem;
+        width: 4rem;
         color: $color-red;
+        cursor: pointer;
     }
 }
 

@@ -1,9 +1,98 @@
 <!-- File to copy & paste code in order to try new code  -->
 
+.information-cards-section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    @include respond(desktop) {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    &__header{
+        font-size: 2.5rem;
+        text-align: center;
+        padding: 3rem 0;
+
+        @include respond(phone){
+            font-size: 3rem;
+            padding: 4rem 0;
+        }
+    }
+}
+
+//Grid Container
+.information-cards-section__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); 
+    grid-gap: 3rem;
+    padding: 0 2rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    @include respond(tab-port) {
+        width: 90%;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); 
+    }
+
+    @include respond(desktop) {
+        width: 100%;
+    }
+}
+
+
+//Grid Cards
+.information-cards-section__container-cards{
+    border: 3px solid $color-grey-light-2;
+    width: 100%;
+    margin: 0 auto;
+    transition: all .3s ease-in-out;
+    text-align: center;
+
+    &:hover{
+        transform: translateY(-2px);
+        box-shadow: $box-shadow-main;
+        border: 3px solid $color-primary;
+    }
+
+    &--container{
+        padding: 2rem;
+
+        @include respond(desktop) {
+            padding: 4rem;
+        }
+
+        & i{
+            font-size: 5rem;
+            color: $color-primary;
+        }
+    
+        & h3{
+            font-size: 2rem;
+            color: $color-primary;
+            padding: 1rem 0px;
+        }
+    
+        & p{
+            font-size: 1.5rem;
+
+            @include respond(desktop){
+                font-size: 1.75rem;
+            }
+        }
+    }
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Political News">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/logo.svg" />
     <link rel="apple-touch-icon" href="images/logo.svg" />
@@ -75,7 +164,15 @@
             <!-- Icons made by Pixel perfect from www.flaticon.com -->
             <div class="information-cards-section__container-cards">
                 <div class="information-cards-section__container-cards--container">
-                    <i class="far fa-bell"></i>
+                    <svg 
+                        id="Capa_1" 
+                        enable-background="new 0 0 512 512" 
+                        fill="#5856D6" 
+                        height="100%" 
+                        viewBox="0 0 100 100" 
+                        width="100%" 
+                        xmlns="http://www.w3.org/2000/svg"><g><path d="m454.703 451.996-13.565-81.392-18.847-23.149c-34.787-42.73-50.3-83.273-50.3-131.457v-10.001c0-47.878-29.16-89.071-70.651-106.759 9.123-10.529 14.663-24.243 14.663-39.235 0-33.086-26.917-60.003-60.003-60.003s-60.003 26.917-60.003 60.003c0 14.992 5.54 28.707 14.663 39.235-41.491 17.688-70.651 58.881-70.651 106.759v10.001c0 48.184-15.513 88.727-50.299 131.456l-18.848 23.15-13.565 81.392h138.7v.001c0 33.086 26.917 60.003 60.003 60.003s60.003-26.917 60.003-60.003v-.001zm-228.706-391.993c0-16.544 13.46-30.003 30.003-30.003s30.003 13.459 30.003 30.003-13.46 30.003-30.003 30.003-30.003-13.459-30.003-30.003zm-55.988 155.995v-10.001c0-47.416 38.576-85.991 85.991-85.991s85.991 38.575 85.991 85.991v10.001c0 53.875 16.541 99.123 53.507 145.994h-278.997c36.967-46.87 53.508-92.118 53.508-145.994zm-72.297 175.994h316.577l5.001 30.004h-326.579zm188.291 60.005c0 16.544-13.46 30.003-30.003 30.003s-30.003-13.459-30.003-30.003v-.001z"/></g>
+                    </svg>
                     <h3 class="information-cards-section__container-cards-heading">Recent News</h3>
                     <p class="information-cards-section__container-cards-info">Get updates related to the political issues you choose</p>
                 </div>
@@ -130,7 +227,12 @@
         <div class="features-section__container">
             <div class="features-section__container-block" data-aos="fade-up">
                 <div class="features-section__container-block--image">
-                    <img src="images/iphone-categories.webp" alt="iphone mockup">
+                    <picture>
+                        <source type="image/webp" srcset="images/iphone-categories.webp" /> 
+                        <!-- if browser can't use webp, use source below instead -->
+                        <source type="image/png" srcset="images/iphone-categories.png" /> 
+                        <img src="images/iphone-categories.png" alt="iphone mockup">
+                    </picture>
                 </div>
                 <div class="features-section__container-block--description">
                     <h3 class="primary-color-text">1. Choose Interests</h3>
@@ -144,7 +246,12 @@
 
             <div class="features-section__container-block reverse" data-aos="fade-up">
                 <div class="features-section__container-block--image">
-                    <img src="images/iphone-bills.webp" alt="iphone mockup">
+                    <picture>
+                        <source type="image/webp" srcset="images/iphone-bills.webp" /> 
+                        <!-- if browser can't use webp, use source below instead -->
+                        <source type="image/png" srcset="images/iphone-bills.png" /> 
+                        <img src="images/iphone-bills.png" alt="iphone mockup">
+                    </picture>
                 </div>
                 <div class="features-section__container-block--description">
                     <h3 class="primary-color-text">2. Read Bills</h3>
@@ -158,7 +265,12 @@
 
             <div class="features-section__container-block" data-aos="fade-up">
                 <div class="features-section__container-block--image">
-                    <img src="images/iphone-bill-details.webp" alt="iphone mockup">
+                    <picture>
+                        <source type="image/webp" srcset="images/iphone-bill-details.webp" /> 
+                        <!-- if browser can't use webp, use source below instead -->
+                        <source type="image/png" srcset="images/iphone-bill-details.png" /> 
+                        <img src="images/iphone-bill-details.png" alt="iphone mockup">
+                    </picture>
                 </div>
                 <div class="features-section__container-block--description">
                     <h3 class="primary-color-text">3. See Details</h3>
@@ -172,7 +284,12 @@
 
             <div class="features-section__container-block reverse" data-aos="fade-up">
                 <div class="features-section__container-block--image">
-                    <img src="images/iphone-representatives.webp" alt="iphone mockup">
+                    <picture>
+                        <source type="image/webp" srcset="images/iphone-representatives.webp" /> 
+                        <!-- if browser can't use webp, use source below instead -->
+                        <source type="image/png" srcset="images/iphone-representatives.png" /> 
+                        <img src="images/iphone-representatives.png" alt="iphone mockup">
+                    </picture>
                 </div>
                 <div class="features-section__container-block--description">
                     <h3 class="primary-color-text">4. Notify Representatives</h3>
