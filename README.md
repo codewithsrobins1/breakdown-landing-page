@@ -30,9 +30,9 @@ https://breakdown-landing.netlify.app/
 
 ## 2. Design
 
-![demo](https://github.com/codewithsrobins1/palette-picker/blob/master/readMeGif.gif?raw=true)
-![demo](https://github.com/codewithsrobins1/palette-picker/blob/master/readMeGif.gif?raw=true)
-![demo](https://github.com/codewithsrobins1/palette-picker/blob/master/readMeGif.gif?raw=true)
+![demo](https://github.com/codewithsrobins1/breakdown-landing-page/blob/master/Original%20Designs.PNG)
+![demo](https://github.com/codewithsrobins1/breakdown-landing-page/blob/master/Color%20Palette.PNG)
+![demo](https://github.com/codewithsrobins1/breakdown-landing-page/blob/master/typography.PNG)
 
 * Started with paper and pencil wireframing 
 * Skipped low fidelity wireframes and went to high fidelity
